@@ -618,11 +618,20 @@
             &copy; 2026 Life Bridge All Rights Reserved.
         </div>
     </footer>
+<!-- ... existing code ... -->
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-6 border-t border-white/10 text-center text-[10px] opacity-60 font-light">
+            &copy; 2026 Life Bridge All Rights Reserved.
+        </div>
+    </footer>
 
+    <!-- ↓ここから下を上書きしてください↓ -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-        // ページが完全に読み込まれてからアイコンを表示する命令に変更
-        document.addEventListener('DOMContentLoaded', function() {
-            lucide.createIcons();
+        // ページが読み込まれたら確実にアイコンを表示する設定
+        window.addEventListener('DOMContentLoaded', (event) => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
         });
     </script>
 </body>
